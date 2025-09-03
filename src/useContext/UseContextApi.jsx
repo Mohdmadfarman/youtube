@@ -37,7 +37,7 @@ export const AppContext=({children})=>{
                 fetchYoutubeData({
                     part: "snippet,contentDetails,statistics",
                     regionCode: "IN",
-                    maxResults: 10,
+                    maxResults: 30,
                     chart: "mostPopular",
                 });
             } else {
@@ -45,7 +45,7 @@ export const AppContext=({children})=>{
                     part: "snippet,contentDetails,statistics",
                     chart: "mostPopular",
                     regionCode: "IN",
-                    maxResults: 8,
+                    maxResults: 20,
                     videoCategoryId: selectcatagory, // Ensure this is valid
                 });
             }
@@ -68,3 +68,4 @@ export const AppContext=({children})=>{
 export const useAppContext=()=>{
     return useContext(Context);
 }
+
